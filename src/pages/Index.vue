@@ -1,12 +1,14 @@
+
 <script setup lang="ts">
+import { log } from "console"
 const { t, locale } = useI18n()
 const { isDark, toggleDark } = useDarks()
 
 const toggleLocale = () => {
     locale.value = locale.value === 'zh-CN' ? 'en' : 'zh-CN'
 }
-</script>
 
+</script>
 <template>
     <div class="m-6">Hello，This is the tov template！！</div>
     <div class="cursor-pointer m-6" @click="toggleDark()">light: {{ isDark }} click me!!</div>

@@ -1,3 +1,7 @@
+/* 
+	模拟请求接口数据
+*/
+
 import { MockMethod } from 'vite-plugin-mock'
 export default [
 	{

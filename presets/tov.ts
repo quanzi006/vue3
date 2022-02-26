@@ -1,3 +1,6 @@
+/* 
+	插件配置文件
+*/
 import { resolve } from 'path'
 import Vue from '@vitejs/plugin-vue'
 import Prism from 'markdown-it-prism'
@@ -54,7 +57,9 @@ export default () => {
 		}),
 		// 文件路由
 		Pages({
-			extensions: ['vue', 'md', 'tsx']
+			extensions: ['vue', 'md', 'tsx'],
+			// 排除components文件夹下面的文件
+			exclude: ["**/components/*.vue"] 
 		}),
 		// 布局系统
 		Layouts(),

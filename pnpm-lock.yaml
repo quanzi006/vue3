@@ -1,6 +1,8 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@iconify-json/lucide': ^1.1.2
+  '@iconify-json/wpf': ^1.1.0
   '@intlify/vite-plugin-vue-i18n': ^3.3.0
   '@markthree/ilazy': ^1.0.2
   '@markthree/node-shared': ^1.3.2
@@ -50,6 +52,8 @@ dependencies:
   vue: 3.2.31
 
 devDependencies:
+  '@iconify-json/lucide': 1.1.2
+  '@iconify-json/wpf': 1.1.0
   '@intlify/vite-plugin-vue-i18n': 3.3.0_vite@2.8.4+vue-i18n@9.1.9
   '@markthree/ilazy': 1.0.2
   '@markthree/node-shared': 1.3.2
@@ -438,6 +442,18 @@ packages:
 
   /@emmetio/scanner/1.0.0:
     resolution: {integrity: sha512-8HqW8EVqjnCmWXVpqAOZf+EGESdkR27odcMMMGefgKXtar00SoYNSryGv//TELI4T3QFsECo78p+0lmalk/CFA==}
+    dev: true
+
+  /@iconify-json/lucide/1.1.2:
+    resolution: {integrity: sha512-c5pEyPRG/o3Nu3sqkUxF1voY7VEmxh9RcnE+cXTzmHqA3To4dfwaUlU25iOdF8HHZV7meSf0jMXAIxfRvQuE5A==}
+    dependencies:
+      '@iconify/types': 1.0.12
+    dev: true
+
+  /@iconify-json/wpf/1.1.0:
+    resolution: {integrity: sha512-T7ORFfk3vzS+DBaW4Vwd+Je6i/FgEysXTgLyndP9yLZ9viKHhq1TcPVWcs5tujr3FRbkJ7nA6Nebh4JcGZ6BMA==}
+    dependencies:
+      '@iconify/types': 1.0.12
     dev: true
 
   /@iconify/types/1.0.12:
