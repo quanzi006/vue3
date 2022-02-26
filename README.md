@@ -1,4 +1,4 @@
-# tov-template
+# vue3-template
 
 一个 ` vite + vue3 + ts ` 开箱即用现代开发模板
 
