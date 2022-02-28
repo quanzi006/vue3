@@ -4,8 +4,6 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Aa: typeof import('./../../src/components/aa.tsx')['default']
-    Bb: typeof import('./../../src/pages/help/components/bb.tsx')['default']
   }
 }
 

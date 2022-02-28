@@ -1061,11 +1061,3 @@ export default defineComponent({
 <br />
 <br />
 <br />
-
-## License
-
-Made with markthree
-
-Published under [MIT License](./LICENSE).
-
-<br />
