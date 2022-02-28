@@ -1,11 +1,16 @@
-# vue-template
+# vue3-template
 
 一个 ` vite + vue3 + ts ` 开箱即用现代开发模板
 
 ## 开发规范 🐂
 1. `src/components`：只能存储全局通用组件
-2. `src/**/components`：存储业务组件
-3. `src/composables` 目录用来存储 `composition-api` 模块。
+2. `src/**/components`：目录用来存储业务组件
+3. `src/composables`： 目录用来存储 `composition-api` 模块
+4.  `src/layouts`： 布局模版目录
+5.  `src/styles`： 全局样式目录
+6. `/mock`：目录用来接口测试
+7. `/presets`：目录存放项目配置（插件配置、自动引入组件/api等）
+8. `/scripts`：node脚本代码（使用命令创建/删除文件）
 
 ## 特点 🐳
 
@@ -1060,12 +1065,4 @@ export default defineComponent({
 
 <br />
 <br />
-<br />
-
-## License
-
-Made with markthree
-
-Published under [MIT License](./LICENSE).
-
 <br />
