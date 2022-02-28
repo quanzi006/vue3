@@ -4,10 +4,8 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ILucideCloudy: typeof import('~icons/lucide/cloudy')['default']
-    'IWpf:fingerprintScan': typeof import('~icons/wpf/fingerprint-scan')['default']
-    IWpfFullTrash: typeof import('~icons/wpf/full-trash')['default']
-    OnClickOutside: typeof import('@vueuse/components')['OnClickOutside']
+    Aa: typeof import('./../../src/components/aa.tsx')['default']
+    Bb: typeof import('./../../src/pages/help/components/bb.tsx')['default']
   }
 }
 

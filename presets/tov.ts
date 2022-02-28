@@ -93,7 +93,8 @@ export default () => {
 				ElementPlusResolver(),
 				AntDesignVueResolver(),
 				VueUseComponentsResolver()
-			]
+			],
+			dirs: ['src/**/components']
 		}),
 		// 目录下 api 按需自动引入辅助插件
 		DirResolverHelper(),
