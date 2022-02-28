@@ -2,8 +2,10 @@
 
 一个 ` vite + vue3 + ts ` 开箱即用现代开发模板
 
-<br />
-<br />
+## 开发规范 🐂
+1. `src/components`：只能存储全局通用组件
+2. `src/**/components`：存储业务组件
+3. `src/composables` 目录用来存储 `composition-api` 模块。
 
 ## 特点 🐳
 
@@ -39,26 +41,12 @@
 
 ## 克隆模板 🦕
 
-1. Github
+Github
 
 ```shell
-git clone git@github.com:dishait/tov-template.git
-```
-2. Gitee
-
-```shell
-git clone git@gitee.com:dishait/tov-template.git
+git clone git@github.com:quanzi006/vue3.git
 ```
 
-3. degit
-
-```shell
-npx degit https://github.com/dishait/tov-template#main
-```
-4. 新的 `Github` 仓库 👉 [Use this template](https://github.com/dishait/tov-template/generate)
-
-<br />
-<br />
 <br />
 
 ## `node` 版本推荐 🐎
@@ -227,50 +215,6 @@ pnpm i
 <br />
 <br />
 
-
-## 动机 🐗
-
-为什么要做这个 **模板** 呢？
-
-1. 为下次开发节省浪费在配置上的时间
-2. 结合主流插件整合现代开发架构，提高开发效率
-
-<br />
-<br />
-
-## 使用场景 🐻
-
-什么时候你应该用? 
-
-1. 不想浪费时间在项目配置上
-2. 希望尝试用更现代的方式开发 `web` 应用，提高开发效率
-
-<br />
-<br />
-
-## 启发 🐃
-
-该模板受 **[vitesse](https://github.com/antfu/vitesse)** 启发，如果你有 SSG 的场景，那么推荐你始终使用 **[vitesse](https://github.com/antfu/vitesse)**。
-
-<br />
-<br />
-
-
-
-## 组织 🦔
-
-欢迎关注 **帝莎编程**
-- [官网](http://dishaxy.dishait.cn/)
-- [Gitee](https://gitee.com/dishait)
-
-- [Github](https://github.com/dishait)
-
-- [网易云课堂](https://study.163.com/provider/480000001892585/index.htm?share=2&shareId=480000001892585)
-
-<br />
-<br />
-
-
 ## 详情 🐳
 
 ### [1. Vite 的](https://cn.vitejs.dev/)
@@ -287,7 +231,7 @@ pnpm i
 
 ### [3. 文件路由](https://github.com/hannoeru/vite-plugin-pages)
 
-目录结构即路由。
+目录结构即路由（除components下的文件）。
 
 eg: 
 - `src/pages/index.vue` => `/`
@@ -297,6 +241,7 @@ eg:
 - `src/pages/users/[id].vue` => `/users/:id`
 - `src/pages/[user]/settings.vue` => `/:user/settings`
 -  `src/pages/[...notFound].vue` => 404 路由
+-  `src/pages/users/components/userTable.vue` => 此文件在components下，为组件，不配置路由,若访问url为404路由
 
 具体可见 👉 [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages#file-system-routing)
 
@@ -361,11 +306,11 @@ eg:
     <div>我是首页</div> 
 </template>
 
-<!-- 添加自定义块 👇 -->
-<route lang="yaml">
+<!-- 添加自定义块 👇  注：下面代码放开注释-->
+<!-- <route lang="yaml">
 meta:
   layout: custom
-</route>
+</route> -->
 ```
 此时路由到 `/`, 页面将渲染
 
@@ -516,7 +461,7 @@ export default defineStore('counter', {
 </template>
 ```
 
-现在只要在 `src/components` 下定义的组件都将会按需引入，即 `import` 是不需要的。
+现在只要在 `components` 下定义的组件都将会按需引入，即 `import` 是不需要的。
 
 ```html
 <!-- src/pages/index.vue -->
@@ -525,7 +470,7 @@ export default defineStore('counter', {
 </template>
 ```
 
-同时流行组件库自动引入也是支持的，例如 `Naive ui`。
+同时流行UI组件库自动引入也是支持的，例如 `Naive ui`。
 
 只需安装依赖。
 
@@ -1083,7 +1028,7 @@ const toggleLocale = () => {
 
 ### 25. [`tsx` 支持](https://github.com/vitejs/vite/tree/main/packages/plugin-vue-jsx)
 
-只需要 `tsx` 文件放在 `src/components` 下，即可直接在模板中使用。
+只需要 `tsx` 文件放在 `*/components` 下，即可直接在模板中使用。
 
 例如你有一个 `src/components/foo.tsx` 文件，那么即可直接在模板中使用。
 
